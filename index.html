@@ -1,9 +1,127 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.4.1.js"></script>
+<!--    导入节流和防抖方法-->
+    <script src="js/throttle.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/lyric.js"></script>
+    <script src="js/index.js"></script>
+
 </head>
 <body>
-<p class="title">网页显示成功！</p>
+<!--        背景图片-->
+<div class="back"></div>
+<div class="mask"></div>
+<!--头部 S-->
+        <header>
+            <h1 class="logo"><a href="#"></a></h1>
+
+            <ul class="register">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">设置</a></li>
+            </ul>
+        </header>
+<!--头部 E-->
+        <div class="content">
+<!--            主要内容 S-->
+            <div class="content_in">
+                <div class="player_music">
+                    <div class="music-toolbar">
+                        <a href="javascript:;" class="like">
+                            <i></i>
+                            收藏
+                        </a>
+                        <a href="javascript:;" class="fav">
+                            <i></i>
+                           添加到
+                        </a>
+                        <a href="javascript:;" class="down">
+                            <i></i>
+                            下载
+                        </a>
+                        <a href="javascript:;" class="delete">
+                            <i></i>
+                            删除
+                        </a>
+                        <a href="javascript:;" class="deleted">
+                            <i></i>
+                            清空列表
+                        </a>
+                    </div>
+                    <div class="music-list" id="music-list">
+                        <ul>
+                            <li>
+                                <input type="checkbox" class="list-checkbox">
+                                <div class="number"></div>
+                                <div class="song_header_name">歌曲</div>
+                                <div class="song_header_author">歌手</div>
+                                <div class="song_header_time">时间</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="player_music_info">
+                    <div class="music_info" >
+                        <a href="javascript:;" class="music_info_pic">
+                            <img src="" alt="">
+                        </a>
+                        <div class="music_info_song">
+                            歌曲名：<a href="javascript:;"  class="music_info_name">红日</a>
+                        </div>
+                        <div class="music_info_song">
+                            歌手名：<a href="javascript:;"  class="music_info_songer">XXX</a>
+                        </div>
+                        <div class="music_info_song">
+                            专辑名：<a href="javascript:;"  class="music_info_album">XXX</a>
+                        </div>
+                        <div class="music_info_lyric_box">
+                            <ul class="music_info_lyric"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--            主要内容 E-->
+<!--            音乐控制面板 S-->
+            <div class="footer">
+                <a href="javascript:;" class="music_pre"></a>
+                <a href="javascript:;" class="music_play "></a>
+                <a href="javascript:;" class="music_next"></a>
+                <div class="music_progress_info">
+                    <div class="music_progress_info_song">
+                        <a href="javascript:;"  class="music_info_name">红日</a>-
+                        <a href="javascript:;" class="music_info_songer">XXX</a>
+                        <span class="music_progress_info_end_time" >04:02</span>
+                        <span class="music_progress_info_star_time" >00:00</span>
+                    </div>
+                    <div class="music_progress_info_load">
+                        <hr>
+                        <div class="music_progress_info_loading"></div>
+                        <i class="music_progress_info_dot"></i>
+                    </div>
+                </div>
+                <a href="javascript:;" class="music_mode"></a>
+                <a href="javascript:;" class="music_fav"></a>
+                <a href="javascript:;" class="music_down"></a>
+                <a href="javascript:;" class="music_comment"></a>
+                <a href="javascript:;" class="music_only"></a>
+                <div class="music_voice_info">
+                    <a href="" class="music_voice_icon "></a>
+                    <div class="music_voice_info_load">
+                        <hr>
+                        <div class="music_voice_info_loading"></div>
+                        <i class="music_voice_info_dot"></i>
+                    </div>
+                </div>
+            </div>
+            <!--            音乐控制面板 E-->
+        </div>
+
+        <audio src="" id="audio"></audio>
 </body>
-    <script src="javascirpt.js"></script>
 </html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        function fun(a,b,c){
+            console.log(a + b +c);
+
+        };
+
+        function throttle(time,fn,...arg){
+            let start = + new Date();
+            let self = this;
+            let end;
+            // let itmer;
+            return function () {
+                end = + new Date();
+                if(end - start > time){
+                    start = + new Date();
+                    fn.apply(self,arg);
+                }else {
+                    return;
+                }
+            }
+        }
+
+        function antiShake(time,fn,...arg){
+            let start = + new Date();
+                let self = this,itmer ;
+
+                return　function () {
+                    if(itmer){
+                        clearTimeout(itmer);
+                    }
+                    itmer = setTimeout(function () {
+                            fn.apply(this,arg);
+                    },time);
+                }
+        }
+        function call(callback){
+             $(document).mousedown(callback(123))
+        }
+        call(function (value) {
+            let index = value;
+            console.log('ooooo');
+            return  function () {
+                console.log(value);
+            }
+        })
+
+
+        // $(document).mousemove(throttle(500,function () {
+        //     console.log('ohhhhhhhh');
+        // }));
+        // $(document).mousedown(throttle(500,fun,1));
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>
